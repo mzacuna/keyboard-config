@@ -8,7 +8,7 @@
           q     w     e     r     t      y     u     i     o     p      [
   caps    a     s     d     f     g      h     j     k     l     ;      '
           z     x     c     v     b      n     m     ,     .     /
-                                  spc
+                                  spc    rmet
 )
 
 (deflayer canaria
@@ -17,7 +17,7 @@
           w    l    y    p    k    z    j    o    u    ;    _
   @nav    c    r    s    t    b    f    n    e    i    a    '
           x    v    d    g    q    m    h    /    ,    .
-                              _
+                              _    @acc-can
 )
 
 (deflayer qwerty
@@ -26,7 +26,25 @@
           _    _    _    _    _    _    _    _    _    _    _
   @nav    _    _    _    _    _    _    _    _    _    _    _
           _    _    _    _    _    _    _    _    _    _
-                              _
+                              _    @acc-qw
+)
+
+(deflayer accents-canaria
+       _     _    _    _     _    _    _     _     _     _     _     _
+       @¡    _    _    @€    _    _    _     _     _     @¡    @–    _
+       _     _    _    _     _    _    @ö    @ó    @ú    @ü    _
+  _    @ç    _    _    _     _    _    @ñ    @é    @í    @á    _
+       _     _    _    _     _    _    _     @¿    _     _
+                             _    _
+)
+
+(deflayer accents-qwerty
+       _     _    _     _     _    _     _     _     _     _     _     _
+       @¡    _    _     @€    _    _     _     _     _     @¡    @–    _
+       _     _    @é    _     _    @ü    @ú    @í    @ó    @ö    _
+  _    @á    _    _     _     _    _     _     _     _     _     _
+       _     _    @ç    _     _    @ñ    _     _     _     @¿
+                              _    _
 )
 
 (deflayer navigation
@@ -35,7 +53,7 @@
        @escaps    M-`     S-tab    tab     bck      brup    home    up      end     M-S-4    @lysw
   _    @ctl       @alt    @sft     @met    ret      esc     lft     down    rght    bspc     del
        M-z        M-x     M-c      M-v     fwd      brdn    pp      mute    vold    volu
-                                           M-spc
+                                           M-spc    _
 )
 
 (defalias
@@ -46,4 +64,23 @@
   alt (one-shot 60000 lalt)
   sft (one-shot 60000 lsft)
   ctl (one-shot 60000 lctl)
+
+  acc-can (layer-while-held accents-canaria)
+  acc-qw (layer-while-held accents-qwerty)
+)
+
+(defalias
+  ¡ (unicode ¡)
+  ¿ (unicode ¿)
+  € (fork (unicode €) (unicode ¥) (lsft rsft))
+  – (fork (unicode –) (unicode —) (lsft rsft))
+  á (fork (unicode á) (unicode Á) (lsft rsft))
+  é (fork (unicode é) (unicode É) (lsft rsft))
+  í (fork (unicode í) (unicode Í) (lsft rsft))
+  ó (fork (unicode ó) (unicode Ó) (lsft rsft))
+  ú (fork (unicode ú) (unicode Ú) (lsft rsft))
+  ñ (fork (unicode ñ) (unicode Ñ) (lsft rsft))
+  ç (fork (unicode ç) (unicode Ç) (lsft rsft))
+  ö (fork (unicode ö) (unicode Ö) (lsft rsft))
+  ü (fork (unicode ü) (unicode Ü) (lsft rsft))
 )
