@@ -3,10 +3,10 @@
 )
 
 (defsrc
-          1    2    3    4    5    6    7    8    9    0    -    =
-          q    w    e    r    t    y    u    i    o    p    [
-  caps    a    s    d    f    g    h    j    k    l    ;    '
-          z    x    c    v    b    n    m    ,    .    /
+          1    2    3    4    5      6    7    8    9    0    -    =
+          q    w    e    r    t      y    u    i    o    p    [
+  caps    a    s    d    f    g      h    j    k    l    ;    '
+          z    x    c    v    b      n    m    ,    .    /
                               spc
 )
 
@@ -27,9 +27,9 @@
 )
 
 (deflayer navigation
-       f1         f2      f3       f4      f5       f6      f7      f8      f9      f10      f11      f12
-       @escaps    _       S-tab    tab     bck      brup    home    up      end     _        @lysw
-  _    @met       @alt    @sft     @ctl    ret      esc     lft     down    rght    bspc     del
+       f1         f2      f3       f4      f5       f6      f7      f8      f9      f10     f11      f12
+       @escaps    _       S-tab    tab     bck      brup    home    up      end     _       @lysw
+  _    @met       @alt    @sft     @ctl    ret      esc     lft     down    rght    bspc    del
        C-z        C-x     C-c      C-v     fwd      brdn    pp      mute    vold    volu
                                            M-spc
 )
